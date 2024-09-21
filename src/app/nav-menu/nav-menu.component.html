@@ -1,0 +1,42 @@
+<header >
+  <nav
+    class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3"
+  >
+    <div class="container">
+      <div *ngIf="curPage === '/'">
+        <div class="navbar-brand text-light fw-bold">Portal</div>
+      </div>
+      <div *ngIf="curPage === '/new-request'">
+        <div class="navbar-brand text-light fw-bold">New Request</div>
+      </div>
+      <div *ngIf="curPage === '/company-settings'">
+        <div class="navbar-brand text-light fw-bold">Company Settings</div>
+      </div>
+      <div *ngIf="curPage === '/new-user'">
+        <div class="navbar-brand text-light fw-bold" >New User</div>
+      </div>
+
+      <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end"
+           [ngClass]="{ show: isExpanded }">
+        <ul class="navbar-nav flex-grow fw-bold">
+
+          <li class="nav-item">
+            <div *ngIf="curPage === '/new-user'">
+              <button (click)="InviteUser()" class="btn mx-3"><mat-icon>add</mat-icon> Invite User</button>
+
+              <button class="btn mx-3" [routerLink]="['/company-settings']"><mat-icon>close</mat-icon> Cancel</button>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div *ngIf="curPage === '/company-settings'">
+              <button class="btn" [routerLink]="['/new-user']"><mat-icon>add</mat-icon> New User</button>
+            </div>
+          </li>
+
+
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

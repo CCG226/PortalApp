@@ -1,0 +1,55 @@
+ <nav class="collapse d-md-block sidebar">
+      <div class="position-sticky">
+        <div class="list-group list-group-flush mx-2 mt-4">
+          <div>
+            <img class="" width="225" height="225" src="../../assets/images/PortalLogo.png" alt="website's logo'" />
+          </div>
+
+          <ul class="navbar-nav flex-grow mt-3">
+            <li class="nav-item mb-3"
+                [routerLinkActive]="['link-active']"
+                [routerLinkActiveOptions]="{ exact: true }">
+              <button class="btn btn-primary rqstBtn" [routerLink]="['/']"><mat-icon>add</mat-icon> New Request</button>
+            </li>
+            <li class="nav-item mb-3"
+                [routerLinkActive]="['link-active']"
+                [routerLinkActiveOptions]="{ exact: true }">
+              <a class="nav-link text-dark" [routerLink]="['/empty']"><mat-icon>folder</mat-icon> REQUESTS</a>
+            </li>
+            <li class="nav-item mb-3"
+                [routerLinkActive]="['link-active']"
+                [routerLinkActiveOptions]="{ exact: true }">
+              <a class="nav-link text-dark" [routerLink]="['/empty']"><mat-icon>search</mat-icon> CHECK ELIGIBILITY</a>
+            </li>
+            <li class="nav-item mb-3"
+                [routerLinkActive]="['link-active']"
+                [routerLinkActiveOptions]="{ exact: true }">
+              <a class="nav-link text-dark" [routerLink]="['/empty']"><mat-icon>business_center</mat-icon> AGENCIES</a>
+            </li>
+            <li class="nav-item mb-3"
+                [routerLinkActive]="['link-active']"
+                [routerLinkActiveOptions]="{ exact: true }">
+              <a class="nav-link text-dark" [routerLink]="['/empty']"><mat-icon>person_pin</mat-icon> RAMZI ALTAMIMI</a>
+            </li>
+            <li class="nav-item mb-3"
+                [routerLinkActive]="['link-active']"
+                [routerLinkActiveOptions]="{ exact: true }">
+              <a class="nav-link text-dark" [routerLink]="['/company-settings']"><mat-icon>settings</mat-icon> COMPANY SETTINGS</a>
+            </li>
+            <li class="nav-item mb-3"
+                [routerLinkActive]="['link-active']"
+                [routerLinkActiveOptions]="{ exact: true }">
+              <a class="nav-link text-dark" [routerLink]="['/empty']"><mat-icon>help</mat-icon> PORTAL FAQS</a>
+            </li>
+            <li class="nav-item mb-3"
+                [routerLinkActive]="['link-active']"
+                [routerLinkActiveOptions]="{ exact: true }">
+              <button  (click)="SignOut()" class="nav-link text-dark"><mat-icon>exit_to_app</mat-icon> LOGOUT</button>
+            </li>
+
+          </ul>
+
+         
+        </div>
+      </div>
+    </nav>

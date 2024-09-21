@@ -1,0 +1,32 @@
+
+.btn {
+   border-width:0px;
+   border-color:transparent;
+   color:black;
+  width: 150px;
+}
+  .btn:hover {
+  color:gray;
+    font-weight: bold;
+  }
+#btn-check-outlined:checked + .btn-outline-primary {
+  border-color: transparent;
+  border-width: 0px;
+  border-bottom-color: purple;
+  border-bottom-width: 4px;
+  background-color: transparent;
+  color: black;
+  font-weight:bold;
+}
+#btn-check-outlined2:checked + .btn-outline-primary {
+  border-color: transparent;
+  border-width: 0px;
+  border-bottom-color: purple;
+  border-bottom-width: 4px;
+  background-color: transparent;
+  color: black;
+  font-weight: bold;
+}
+.btn:focus, .btn:active {
+  box-shadow: 0 4px 2px -3px rebeccapurple !important;
+}

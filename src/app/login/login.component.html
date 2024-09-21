@@ -1,0 +1,37 @@
+<div class="d-flex flex-md-column align-items-center m-3">
+  <img class="" width="225" height="225" src="../../assets/images/PortalLogo.png" alt="website's logo'" />
+
+  <br />
+  <h4>Sign in</h4>
+  <div *ngIf="isPasswordInvalid" class="text-danger fst-italic ">Password must be at least be 4 characters!</div>
+  <div *ngIf="isEmailInvalid" class="text-danger fst-italic ">Invalid email format!</div>
+  <div class="text-danger fst-italic " *ngIf="serverError !== ''">{{serverError}}</div>
+  <br />
+  <form (ngSubmit)="SignIn()">
+    <aw-wizard navBarLocation="">
+      <aw-wizard-step>
+
+        <input class="formInput" placeholder="Email" id="email" name="email" [(ngModel)]="loginAttempt.Email" required />
+        <br />
+        <br />
+
+
+        <button class="btn btn-primary nxt" type="button" awNextStep>Next</button>
+
+      </aw-wizard-step>
+      <aw-wizard-step>
+        <div *ngIf="loginAttempt.Email !== ''">{{loginAttempt.Email}}</div>
+
+        <input class="formInput mb-3 text-decoration-none" placeholder="Password" type="password" id="password" name="password" [(ngModel)]="loginAttempt.Password" required />
+
+        <br />
+        <p class="fst-italic">Forgot Password? <a class="passLink">Click Here</a> </p>
+        <br />
+
+        <button class="btn fw-bold shadow-none" type="button" awPreviousStep>< Back</button>
+        <button class="btn btn-primary " type="submit">Sign In</button>
+
+      </aw-wizard-step>
+    </aw-wizard>
+  </form>
+</div>

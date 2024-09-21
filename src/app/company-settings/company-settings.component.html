@@ -1,0 +1,19 @@
+<div class="paginator">
+  <ul class="pagination">
+    <li class="page-item">
+      <input type="radio" checked class="btn-check" name="options" id="btn-check-outlined" [(ngModel)]="selectedTab" value="Users">
+      <label class="btn btn-outline-primary fs-5 " for="btn-check-outlined">Users</label>
+    </li>
+    <li class="page-item">
+      <input type="radio" class="btn-check" name="options" id="btn-check-outlined2" [(ngModel)]="selectedTab" value="MealPlans">
+      <label class="btn btn-outline-primary fs-5" for="btn-check-outlined2">Meal Plans</label>
+    </li>
+  </ul>
+</div>
+<ng-container *ngIf="selectedTab === 'Users'">
+  <company-users></company-users>
+</ng-container>
+
+<ng-container *ngIf="selectedTab === 'MealPlans'">
+  <company-mealplans></company-mealplans>
+</ng-container>

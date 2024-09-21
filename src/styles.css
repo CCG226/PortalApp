@@ -1,0 +1,74 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+code {
+  color: #e01a76;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #0f9400;
+  border-color: #0f9400;
+  border-radius: 25px;
+  width: 60%;
+  font-weight:bold;
+}
+mat-icon {
+  padding-top: 3px;
+}
+
+select {
+  color: gray;
+  border-top-width: 0px;
+  border-right-width: 0px;
+  border-left-width: 0px;
+  border-color: #d9d5cc;
+}
+input {
+  color: gray;
+  border-top-width: 0px;
+  border-right-width: 0px;
+  border-left-width: 0px;
+  border-color: #d9d5cc;
+}
+  input:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: initial;
+  }
+.custom-dialog {
+  position: fixed;
+  width: 15%;
+  height: 550px;
+  transform: translate(-50%, 0%);
+}
+.custom-nav-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.15);
+  z-index: -2;
+}
+.custom-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.0); 
+  z-index: -1; 
+}
+.btn:focus, .btn:active {
+
+  border-color: transparent !important;
+}

@@ -1,0 +1,25 @@
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+nav {
+    background-color:rebeccapurple;
+    color:white;
+}
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+.btn {
+  background-color: white;
+  border-color: white;
+  border-radius: 25px;
+  color:rebeccapurple;
+  font-weight: bold;
+}
+

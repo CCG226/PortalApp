@@ -1,0 +1,49 @@
+<div class="d-flex justify-content-evenly w-100 ">
+  <div>
+    <mat-icon>search</mat-icon>
+    <input id="searchbar" name="searchbar" placeholder="Search Users..." class="w-150"  [(ngModel)]="searchInput" (input)="Search()"  />
+  </div>
+  <div>
+
+    <select placeholder="All Statuses" class="w-150 mt-2">
+      <option value="" disabled selected hidden>All Statuses</option>
+    </select>
+  </div>
+  <div>
+
+    <select placeholder="All Roles" class="w-150 mt-2">
+      <option value="" disabled selected hidden>All Roles</option>
+    </select>
+  </div>
+</div>
+<br />
+<br />
+<div class="container mt-3 mb-3">
+  <div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Role</th>
+          <th scope="col">Email</th>
+          <th scope="col">Portal Access</th>
+          <th scope="col">Invitation Status</th>
+          <th scope="col">Last Login</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let user of filter">
+          <td class="">{{ user.fullName }}</td>
+          <td>{{ user.companyRole }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.portalAccess }}</td>
+          <td>{{ user.invitationStatus }}</td>
+          <td>{{ user.lastLogin }}</td>
+        </tr>
+
+      </tbody>
+
+    </table>
+  </div>
+  </div>
